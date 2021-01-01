@@ -10,6 +10,14 @@ Notes
 String str will never be null.
 */
 
-var replaceDots = function(str) {
-  return str.replace(/./, '-');
+const replaceDots = (str) => {
+  let newStr = '';
+  for(let i = 0; i < str.length; i++) {
+    if(str[i] === '.') {
+      newStr += '-';
+    } else {
+      newStr += str[i];
+    }
+  }
+  return newStr;
 }
